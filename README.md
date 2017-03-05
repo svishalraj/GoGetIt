@@ -8,5 +8,5 @@ The app internally triggers the NEC API, to scan the product, which then stores 
 and all the registered users gets notified whenever there is an update.
 
 Steps to run:
-1. Install UserAppSample.apk
-2. Open the app in the android studio and install in the device.
+- Install UserAppSample.apk
+- Open the app in the android studio and install in the device.
