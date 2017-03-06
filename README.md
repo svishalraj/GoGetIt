@@ -10,3 +10,5 @@ and all the registered users gets notified whenever there is an update.
 Steps to run:
 - Install UserAppSample.apk
 - Open the app in the android studio and install in the device.
+- Click on the plus sign at the bottom, this launches NEC API to scan the product, go to the "res" folder and scan it,
+it shall add it to the list.
