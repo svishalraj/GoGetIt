@@ -27,4 +27,9 @@ public class FireBaseImpl implements FireBase {
     public void save(Item item) {
         getRealTimeDatabase().child("list/"+item.getId()).setValue(item);
     }
+
+    @Override
+    public void remove(Item item) {
+        getRealTimeDatabase().child("list/"+item.getId()).removeValue();
+    }
 }

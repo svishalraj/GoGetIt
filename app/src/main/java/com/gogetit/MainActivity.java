@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onChildRemoved(DataSnapshot dataSnapshot) {
-
+                update((ArrayList) dataSnapshot.getValue());
             }
 
             private void update(final ArrayList items) {

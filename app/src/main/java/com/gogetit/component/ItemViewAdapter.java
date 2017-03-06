@@ -103,7 +103,6 @@ public class ItemViewAdapter extends ArrayAdapter<Item> {
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         final Item itemObj = new Item(String.valueOf(count++), item, false, desc.get(item));
-                        //listItems.add(itemObj);
                         fireBase.save(itemObj);
                     }
                 })
@@ -118,7 +117,6 @@ public class ItemViewAdapter extends ArrayAdapter<Item> {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder = null;
         Log.v("ConvertView", String.valueOf(position));
-        System.out.println("===============vishal");
         if (convertView == null) {
             LayoutInflater vi = (LayoutInflater)context.getSystemService(
                     Context.LAYOUT_INFLATER_SERVICE);
@@ -135,9 +133,10 @@ public class ItemViewAdapter extends ArrayAdapter<Item> {
                 public void onClick(View v) {
                     CheckBox cb = (CheckBox) v ;
                     Map<String, String> item = (Map<String, String>) cb.getTag();
-                    Item tmp = new Item(item.get("id"), item.get("itemName"),
+                    Item removeItem = new Item(item.get("id"), item.get("itemName"),
                             getItemChecked(item), item.get("description"));
-                    fireBase.save(tmp);
+                    //fireBase.save(tmp);
+                    fireBase.remove(removeItem);
                 }
             });
         }

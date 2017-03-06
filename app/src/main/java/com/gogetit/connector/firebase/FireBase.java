@@ -21,4 +21,10 @@ public interface FireBase {
      */
     void save(Item item);
 
+    /**
+     * Remove the object from the db.
+     * @param item
+     */
+    void remove(Item item);
+
 }
